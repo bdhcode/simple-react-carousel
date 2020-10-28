@@ -1,6 +1,6 @@
 import React, { useRef, useCallback, useState } from "react";
 import "./App.css";
-const range = 3;
+const range = 4;
 
 function App() {
   const style = {};
@@ -69,10 +69,9 @@ function App() {
           height: "30px",
         }}
       >
-        <Dot index={index} value={0} />
-        <Dot index={index} value={1} />
-        <Dot index={index} value={2} />
-        <Dot index={index} value={3} />
+        {[0, 1, 2, 3, 4].map((itemIndex) => (
+          <Dot index={index} value={itemIndex} />
+        ))}
       </div>
     </div>
   );
